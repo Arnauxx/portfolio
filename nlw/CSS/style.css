@@ -4,9 +4,8 @@
 
 html,
 body {
-  --black: hsl(240, 6%, 13%0;)
+  --black: hsl(240, 6%, 13%);
   --gray: hsl(240, 9%, 89%);
-
   height: 100%;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -37,13 +36,13 @@ main {
   position: relative;
 }
 
-.avatar span{
+.avatar span {
   position: absolute;
   top: -15px;
   z-index: 1;
 }
 
-.avatar > img{
+.avatar > img {
   width: 10rem;
   height: 11.5rem;
   object-fit: cover;
@@ -65,11 +64,12 @@ a {
   align-items: center;
 }
 
-p{
+p {
   margin-top: 2rem;
+  color: var(--gray);
 }
 
-ul{
+ul {
   margin-top: 4rem;
   list-style: none;
   padding: 0;

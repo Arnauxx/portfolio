@@ -17,15 +17,17 @@
           <span>
             <img src="img/build.svg" alt="Selo Rocketseat" />
           </span>
-          <img src="/img/foto_pessoal.jpg" alt="Foto pessoal" />
+          <img id="UserImage" src="/img/foto_pessoal.jpg" alt="Foto pessoal" />
         </div>
 
-        <h1 id="UserName">Arnaux Stevan</h1>
-        <a id="GitHub" href="https://github.com/" target="_blank">
+        <h1 id="UserName">Arnaux</h1>
+        <a id="UserLink" href="https://github.com/" target="_blank">
           <img src="img/github.svg" alt="icone github" />
-          Arnauxx</a
+          <span id="UserLogin">Arnauxx</span></a
         >
-        <p>An instructor focused on helping pople start programming for web</p>
+        <p id="UserBio">
+          An instructor focused on helping pople start programming for web
+        </p>
 
         <ul id="SocialLinks">
           <li class="Youtube">
@@ -51,26 +53,6 @@
         </ul>
       </div>
     </main>
-    <script>
-      const LinksSocialMedia = {
-        Github: 'Arnauxx',
-        Youtube: 'channel/UC_hb_vUSGR8VV2si6rOF9pg',
-        Facebook: 'stevan.silvaanx',
-        Instagram: 'stevanfcgg',
-        Twitter: '#'
-      }
-
-      function ChangeSocialMediaLinks() {
-        for (let li of SocialLinks.children) {
-          const Social = li.getAttribute('class')
-
-          li.children[0].href = `https://www.${Social}.com/${LinksSocialMedia[Social]}`
-        }
-      }
-
-      GitHub.href = `https://github.com/${LinksSocialMedia.Github}`
-
-      ChangeSocialMediaLinks()
-    </script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
