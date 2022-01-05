@@ -20,44 +20,57 @@
           <img src="/img/foto_pessoal.jpg" alt="Foto pessoal" />
         </div>
 
-        <h1>Arnaux Stevan</h1>
-        <a href="https://github.com/Arnauxx">
+        <h1 id="UserName">Arnaux Stevan</h1>
+        <a id="GitHub" href="https://github.com/" target="_blank">
           <img src="img/github.svg" alt="icone github" />
           Arnauxx</a
         >
         <p>An instructor focused on helping pople start programming for web</p>
 
-        <ul>
-          <li>
-            <a href="https://www.google.com">
-              <img src="img/youtube.svg" alt="Icone youtube" target="_blank" />
+        <ul id="SocialLinks">
+          <li class="Youtube">
+            <a href="https://www.youtube.com/" target="_blank">
+              <img src="img/youtube.svg" alt="Icone youtube" />
             </a>
           </li>
-          <li>
-            <a href="#">
-              <img
-                src="img/facebook.svg"
-                alt="Icone facebook"
-                target="_blank"
-              />
+          <li class="Facebook">
+            <a href="https://www.facebook.com/" target="_blank">
+              <img src="img/facebook.svg" alt="Icone facebook" />
             </a>
           </li>
-          <li>
-            <a href="#">
-              <img
-                src="img/instagram.svg"
-                alt="Icone instagram"
-                target="_blank"
-              />
+          <li class="Instagram">
+            <a href="https://www.instagram.com/?hl=pt-br" target="_blank">
+              <img src="img/instagram.svg" alt="Icone instagram" />
             </a>
           </li>
-          <li>
-            <a href="#">
-              <img src="img/twitter.svg" alt="Icone twitter" target="_blank" />
+          <li class="Twitter">
+            <a href="https://twitter.com/" target="_blank">
+              <img src="img/twitter.svg" alt="Icone twitter" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+    <script>
+      const LinksSocialMedia = {
+        Github: 'Arnauxx',
+        Youtube: 'channel/UC_hb_vUSGR8VV2si6rOF9pg',
+        Facebook: 'stevan.silvaanx',
+        Instagram: 'stevanfcgg',
+        Twitter: '#'
+      }
+
+      function ChangeSocialMediaLinks() {
+        for (let li of SocialLinks.children) {
+          const Social = li.getAttribute('class')
+
+          li.children[0].href = `https://www.${Social}.com/${LinksSocialMedia[Social]}`
+        }
+      }
+
+      GitHub.href = `https://github.com/${LinksSocialMedia.Github}`
+
+      ChangeSocialMediaLinks()
+    </script>
   </body>
 </html>
